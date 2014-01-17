@@ -1,0 +1,27 @@
+-- VERSION_3
+-- START DISKCACHE
+D:\GitHub\GameDev\.metadata\.plugins\org.eclipse.core.resources\.projects\Game\com.python.pydev.analysis\v1_indexcache
+.v1_indexcache
+game|0|D:\GitHub\GameDev\Game\src\game.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+4=Game.update
+3=Game.init
+2=Game
+1=game
+-- END DICTIONARY
+-- START TREE 1
+1
+gam|1|Game!9@
+-- END TREE
+-- START TREE 2
+7
+dra|1|draw!2&10@
+gam|1|GAMENAME!2&11@
+ini|3|INIT!3&11@INIT!2&11@init!2&10@
+mpo|1|mPos!4&11@
+run|1|run!2&10@
+scr|1|screen!3&11@
+upd|1|update!2&10@
+-- END TREE
