@@ -1,0 +1,9 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+
+class circle:
+    def __init__(self,radius = 0, position=Vector2(0,0)):
+        pass

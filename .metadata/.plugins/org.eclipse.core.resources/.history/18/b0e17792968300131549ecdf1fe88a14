@@ -1,0 +1,15 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import circle.Circle
+
+class phyObj:
+    def __init__(self):
+        pass
+    
+    def checkCollision(self,obj):
+        if isinstance(obj,Circle):
+            return self.checkCircleCollision(obj)
+        return False

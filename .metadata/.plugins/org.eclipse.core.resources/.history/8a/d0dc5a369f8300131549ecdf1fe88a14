@@ -1,0 +1,8 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+
+class RectCollider:
+    

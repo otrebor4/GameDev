@@ -1,2 +1,12 @@
 MODULES_MANAGER_V2
-game|D:\GitHub\GameDev\Game\src\game.py
+game.__init__|/Users/otrebor/github/GameDev/Game/game/__init__.py
+game.game|/Users/otrebor/github/GameDev/Game/game/game.py
+game.phys.__init__|/Users/otrebor/github/GameDev/Game/game/phys/__init__.py
+game.phys.circle|/Users/otrebor/github/GameDev/Game/game/phys/circle.py
+game.phys.phyObj|/Users/otrebor/github/GameDev/Game/game/phys/phyObj.py
+game.phys.phys|/Users/otrebor/github/GameDev/Game/game/phys/phys.py
+game.phys.rect|/Users/otrebor/github/GameDev/Game/game/phys/rect.py
+game.phys.util|/Users/otrebor/github/GameDev/Game/game/phys/util.py
+game.sprite|/Users/otrebor/github/GameDev/Game/game/sprite.py
+game.util.__init__|/Users/otrebor/github/GameDev/Game/game/util/__init__.py
+game.util.vector2|/Users/otrebor/github/GameDev/Game/game/util/vector2.py

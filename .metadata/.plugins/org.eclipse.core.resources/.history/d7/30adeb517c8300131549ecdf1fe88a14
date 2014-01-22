@@ -1,0 +1,10 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+from game.util.vector2 import Vector2
+
+class circle:
+    def __init__(self,radius = 0, position=Vector2(0,0)):
+        pass

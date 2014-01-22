@@ -1,0 +1,17 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+from game.phys import circle
+
+#check collision circles
+def CheckCollision(c1=circle(), c2=circle()):
+    
+    rsq = c1.pos.distancesq(c2.pos)
+    
+    return False
+
+def HandleCollision(circle1, circle2):
+    pass
+

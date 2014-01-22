@@ -1,0 +1,15 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import phyObj
+class RectCollider(phyObj):
+    def __init__(self, x,y,h,w):
+        self.x = x
+        self.y = y
+        self.h = h
+        self.w = w
+        
+        
+        

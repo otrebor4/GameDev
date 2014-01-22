@@ -1,0 +1,11 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import phyObj
+class RectCollider(phyObj):
+    def __init__(self, min, max):
+        self.min = min
+        self.max = max
+        

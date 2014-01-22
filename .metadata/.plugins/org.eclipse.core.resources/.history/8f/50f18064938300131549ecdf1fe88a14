@@ -1,0 +1,14 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+
+#check collision circles
+def CheckCollision(c1, c2):
+    
+    return False
+
+def HandleCollision(circle1, circle2):
+    pass
+

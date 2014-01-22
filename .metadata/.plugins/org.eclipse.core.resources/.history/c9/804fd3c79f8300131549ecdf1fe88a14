@@ -1,0 +1,8 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import phyObj
+class RectCollider(phyObj):
+    pass

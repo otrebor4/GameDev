@@ -1,0 +1,16 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+
+#check collision circles
+def CheckCollision(c1, c2):
+    r = c1.radius + c2.radius
+    r = r * r
+    rsq = c1.pos.distancesq(c2.pos)
+    return r < rsq
+
+def HandleCollision(circle1, circle2):
+    pass
+

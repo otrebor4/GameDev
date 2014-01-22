@@ -1,0 +1,36 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import phyObj
+class RectCollider(phyObj):
+    def __init__(self, x,y,w,h):
+        self.x = x
+        self.y = y
+        self.h = h
+        self.w = w
+        
+    #y position
+    def top(self):
+        return self.y
+    
+    #y position plus height (h)
+    def bottom(self):
+        return self.y+self.h
+    
+    #x position
+    def left(self):
+        return self.x
+    
+    #x position plus width (w)
+    def right(self):
+        return self.x + self.w
+    
+    def checkRectCollision(self, other):
+        return not ( self.bottom() < other.top() or 
+                     self.top()    > other.bottom() or 
+                     self.left()   > other.right() or
+                     self.right()  < other.left()  )
+        
+        
