@@ -6,18 +6,9 @@ Created on Jan 22, 2014
 from game.util.vector2 import Vector2
 import phyObj
 
-class CircleCollider(phyObj):
-    def __init__(self,radius = 0, position=Vector2(0,0)):
-        self.radius = radius
-        self.pos = position
-        
-    
 
-    def checkCircleCollision(self,other):
-        r = self.radius + other.radius
-        r = r * r
-        rsq = self.pos.distanceSq(other.pos)
-        return r < rsq
-    
-    
-    
+class CircleCollider(phyObj.Collider):
+    def __init__(self, gameObject, position=Vector2(0, 0), radius = 0):
+        phyObj.Collider.__init__(self, gameObject)
+        self.radius = radius
+        self.position = position

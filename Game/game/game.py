@@ -3,27 +3,33 @@ Created on Jan 15, 2014
 
 @author: Otrebor45
 '''
-import pygame,sys,time
+import sys
+import time
+
+import pygame
 from pygame.locals import *
+
 
 class Game:
     GAMENAME = "null"
     
-    INIT = False
-    
-    def init(self):
+    INIT = False        
+    def __init__ (self):
         self.INIT = True
         pygame.init()
-        self.screen = pygame.display.set_mode((500,500))
+        self.screen = pygame.display.set_mode((500, 500))
         pygame.display.set_caption(self.GAMENAME)
-    
+        
+        
+        
+        
     def draw(self, delta):
-        self.screen.fill( (255,255,0))
-        pygame.draw.line(self.screen,(0,0,0),(0,0),self.mPos)
+        self.screen.fill((255, 255, 0))
+        pygame.draw.line(self.screen, (0, 0, 0), (0, 0), self.mPos)
         pygame.display.flip()
         return
     
-    def update(self,delta):
+    def update(self, delta):
         pygame.event.pump()
         for evt in pygame.event.get():
             if evt.type == QUIT:
@@ -43,6 +49,7 @@ class Game:
             oldtime = newtime
             self.update(delta)
             self.draw(delta)
+            
 if __name__ == '__main__':
     g = Game()
     g.run()
