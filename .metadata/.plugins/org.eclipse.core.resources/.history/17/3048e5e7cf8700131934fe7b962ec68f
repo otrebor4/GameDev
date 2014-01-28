@@ -1,0 +1,11 @@
+'''
+Created on Jan 27, 2014
+
+@author: otrebor
+'''
+
+#this = self
+def gravity(this, delta):
+    
+    this.addVel()
+    pass

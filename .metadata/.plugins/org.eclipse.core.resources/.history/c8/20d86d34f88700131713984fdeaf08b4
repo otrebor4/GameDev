@@ -1,0 +1,25 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import GameObject
+import Object
+import phys
+import pygame
+
+class RectObject(GameObject.GameObject):
+    def __init__(self, x, y, w, h, collor):
+        self.collor = collor
+        self.collider = phys.rect.RectCollider(x, y, w, h)
+        self.render = Object()
+        self.render.draw = lambda screen: self.drawRect(screen)
+        self.pos = lambda: self.collider.pos()
+        
+        
+    def rect(self):
+        return pygame.rect.Rect(self.collider.x, self.collider.y, self.collider.w, self.collider.h)
+        
+    def drawRect(self, screen):
+        pygame.draw.rect(screen, self.collor, self.rect())
+        

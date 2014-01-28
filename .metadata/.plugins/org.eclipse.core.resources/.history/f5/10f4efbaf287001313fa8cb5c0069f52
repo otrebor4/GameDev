@@ -1,0 +1,14 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import game.util.vector2 as vector2
+import phyObj.Collider as Collider
+
+
+class CircleCollider(Collider):
+    def __init__(self, gameObject, position=vector2.Vector2(0, 0), radius=0):
+        Collider.__init__(self, gameObject)
+        self.radius = radius
+        self.position = position

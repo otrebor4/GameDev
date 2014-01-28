@@ -1,0 +1,14 @@
+'''
+Created on Jan 27, 2014
+
+@author: otrebor
+'''
+
+#this = self
+class ConstForse:
+    def __init__(self, gameObject, forse):
+        self.gameObject = gameObject
+        self.forse = forse
+    def gravity(self, delta):
+        
+        pass

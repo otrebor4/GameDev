@@ -1,0 +1,20 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+class Sprite:
+    
+    # sprite constructor
+    def __init__(self, img, x,y, w, h):
+        
+        pass
+    
+    # game update
+    def update(self):
+        pass
+    
+    # draw sprite
+    def draw(self):
+        pass
+    

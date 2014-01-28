@@ -1,0 +1,17 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+
+
+class Debug:
+    
+    
+    def Log(msg):
+        pass
+    def LogError(msg):
+        pass
+        
+    def LogWarning(msg):
+        pass

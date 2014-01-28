@@ -1,0 +1,14 @@
+'''
+Created on Jan 27, 2014
+
+@author: otrebor
+'''
+
+#this = self
+class Gravity:
+    def __init__(self, gameObject):
+        self.gameObject = gameObject
+    def gravity(self, delta):
+    
+        this.addVel()
+        pass

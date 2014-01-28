@@ -1,0 +1,17 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+
+class MyClass(object):
+    '''
+    classdocs
+    '''
+
+
+    def __init__(self, params):
+        '''
+        Constructor
+        '''
+        

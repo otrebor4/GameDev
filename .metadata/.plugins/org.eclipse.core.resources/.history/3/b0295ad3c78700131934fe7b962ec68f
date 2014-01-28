@@ -1,0 +1,28 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import pygame
+
+class Sprite:
+    
+    # sprite constructor
+    def __init__(self, img, x,y, w, h):
+        self.img = img
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h
+        pass
+    
+    # draw sprite
+    
+    def draw(self,screen):
+        if self.img != None:
+            screen.blit(self.img, pygame.rect.Rect(self.x, self.y, self.w, self.h ) )
+    
+
+class Circle:
+    def __init__(self, img, x,y, r):
+        

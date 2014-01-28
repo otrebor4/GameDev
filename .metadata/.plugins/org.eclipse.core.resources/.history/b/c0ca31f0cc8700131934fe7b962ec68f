@@ -1,0 +1,21 @@
+'''
+Created on Jan 27, 2014
+
+@author: otrebor
+'''
+import phys.physEng as physEng
+import sprite,gameObject
+
+class World:
+    
+    def __init__(self):
+        self.phyEng = physEng.PhysEng()
+        
+    
+    def addWall(self, collor, x, y, w, h):
+        wall 
+    def addSprite(self, img, x,y, w, h):
+        sprite = sprite.Sprite( img, x, y, w, h)    
+        self.phyEng.add( sprite )
+        
+    

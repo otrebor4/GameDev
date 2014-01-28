@@ -1,0 +1,9 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import base.Component as Component
+class ApplySpeed(Component.Component):
+    def __init__(self, gameObject):
+        self.gameObject

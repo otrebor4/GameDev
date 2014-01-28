@@ -1,0 +1,23 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+from base import *
+class CircleObject(GameObject):
+    def __init__(self, x, y, r, collor):
+        self.collor = collor
+        self.collider = phys.circle.CircleCollider(util.vector2.Vector2(x, y), r)
+        self.render = Object()
+        self.render.draw = lambda screen: self.drawCircle(screen)
+        self.pos = lambda: self.collider.pos()
+        
+        
+    def drawCircle(self, screen):
+        pygame.draw.circle(screen, self.collor, (self.collider.pos().x, self.collider.pos().y), self.collider.r)
+        
+        
+        
+        
+        
+        

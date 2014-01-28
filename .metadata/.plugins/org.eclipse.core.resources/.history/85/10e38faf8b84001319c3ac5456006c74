@@ -1,0 +1,33 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+import phyObj,math
+
+class RectCollider(phyObj):
+    
+    def __init__(self, x, y, w, h):
+        self.x = x  # x position left side of screen
+        self.y = y  # y position top side of screen
+        self.h = h  # h height of the rectangle
+        self.w = w  # w width of the rectangle
+        self.r = math.sqrt( self.w*self.w + self.h*self.h)/2
+    def top(self):
+        return self.y  # y position
+    
+    def bottom(self):
+        return self.y + self.h  # y position plus height(h)
+    
+    def left(self):
+        return self.x  # x position
+    
+    def right(self):
+        return self.x + self.w  # x position plus width (w)
+    
+    def center(self):
+        return (self.x+self.w/2, self.y+self.h/2)
+    
+    def radius(self):
+        return self.r
+    
