@@ -1,1 +1,10 @@
-DELSTRmain
+INSTUPscripts.ConstForse
+/Users/otrebor/github/GameDev/Game/scripts/ConstForse.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&2|7|2|1
+update=7
+__init__=3
+ConstForse=1
+forse=6
+scripts.ConstForse=2
+gameObject=4
+ConstForse.__init__=5

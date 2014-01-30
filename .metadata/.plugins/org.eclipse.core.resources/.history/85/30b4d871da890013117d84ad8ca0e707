@@ -11,7 +11,7 @@ import random
 from pygame.locals import *
 
 import game.world as world
-from scripts import ClickToMove
+from game.scripts import ClickToMove
 import game.Game as Game
 
 
