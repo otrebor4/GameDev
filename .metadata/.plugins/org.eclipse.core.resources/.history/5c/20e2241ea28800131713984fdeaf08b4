@@ -1,0 +1,11 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import game.base.Component as Component
+
+#riged component require the gameObject to have a collider
+
+class Riged(Component.Component):
+    

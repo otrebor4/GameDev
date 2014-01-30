@@ -1,0 +1,26 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+
+import game.util.Vector2 as Vector2
+class Geometry:
+    def Geometry(self,x,y):
+        self.position = Vector2.Vector2(x,y)
+        self.aabb = [0,0,0,0]
+        
+    def center(self):
+        return self.position
+    
+    def Top(self):
+        return self.aabb[0]
+    
+    def Right(self):
+        return self.aabb[1]
+    
+    def Bottom(self):
+        return self.aabb[2]
+    
+    def Left(self):
+        return self.aabb[3]

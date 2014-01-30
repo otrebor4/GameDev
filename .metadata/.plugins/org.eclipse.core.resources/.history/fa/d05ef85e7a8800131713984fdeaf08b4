@@ -1,0 +1,25 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import game.util.Vector2 as Vector2
+class Shape:
+    def __init__(self):
+        self.aabb = [0,0,0,0]
+    
+    
+    def Top(self):
+        return self.aabb[0]
+    def Righ(self):
+        return self.aabb[1]
+    def Bottom(self):
+        return self.aabb[2]
+    def Left(self):
+        return self.aabb[3]
+    
+    #return aabb center
+    def GetCenter(self):
+        return Vector2.Vector2( (self.Top()+self.Bottom())/2, (self.Left()+self.Righ())/2 )
+    
+    

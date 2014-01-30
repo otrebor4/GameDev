@@ -1,0 +1,21 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import game.base.Component as Component
+import game.main.pygame as pygame
+
+class ClickToMove(Component.Component):
+    def __init__(self,gameObject):
+        Component.Component.__init__(self, gameObject)
+        self.targe = None
+        
+    def update(self,delta):
+        pos = pygame.mouse.get_pos()
+        (left, mid, right) = pygame.mouse.get_pressed()
+        if left or mid or right:
+            self.targe = pos
+        if self.targe == None:
+            
+        pass

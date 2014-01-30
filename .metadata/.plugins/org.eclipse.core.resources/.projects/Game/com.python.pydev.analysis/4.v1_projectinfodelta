@@ -1,15 +1,1 @@
-INSTUPgame.world
-/Users/otrebor/github/GameDev/Game/game/world.py
-INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1
-World.__init__=5
-update=11
-createRect=9
-addSprite=10
-createWall=7
-draw=12
-game.world=2
-__init__=3
-createCircle=8
-World=1
-phyEng=4
-objects=6
+DELSTRgame.base.GameObject

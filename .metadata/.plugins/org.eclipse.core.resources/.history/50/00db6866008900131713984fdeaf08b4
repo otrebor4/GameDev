@@ -1,0 +1,72 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import game.base.Component as Component
+import game.util.Vector2 as Vector2
+
+#riged component require the gameObject to have a collider
+class Riged(Component.Component):
+    def __init__(self,gameObject, mass = 0.0, ivel = Vector2.Vector2() , applyGravity = True):
+        Component.Component.__init__(self, gameObject)
+        gameObject.riged = self
+        self.mass = mass
+        self.velocity = ivel
+        self.applyGravity = applyGravity
+    
+    #apply movement to object
+    def update(self,delta):
+        if self.gameObject.collider.static:
+            self.speed = Vector2.Vector2()  #static object can't be moved by given speed must manually change position
+        self.gameObject.shape.position.add( self.speed.scale(delta))
+        
+        if self.applyGravity:
+            grav = self.gameObject.world.gravity()
+            self.gameObject.shape.position.add(grav.scale(delta))
+    
+    #other is a GameObject
+    #separation should be handle already, just calculate collision response change velocity
+    def OnCollision(self, collision):
+        other = collision[0]    #gameObject
+        edge = collision[1]     #(Vector2,Vector2)
+        normal = edge[1].sub(edge[0]).normal()
+        
+        
+        '''
+        x = c1.pos().sub(c2.pos())
+    x = x.normalize()
+        v1 = c1.speed
+    x1 = x.dot(v1)
+    v1x = x.scale(x1)
+    v1y = v1.sub(v1x)
+    
+    x = x.scale(-1)
+    
+    v2 = c2.speed
+    x2 = x.dot(v1)
+    v2x = x.scale(x2)
+    v2y = v2.sub(v2x)
+    
+    m1, m2 = c1.mass(), c2.mass()
+    cm = m1 + m2
+    
+    nV1 = v1x.scale((m1 - m2) / cm).add(v2x.scale((2 * m2) / cm)).add(v1y)
+    nV2 = v1x.scale((2 * m1) / cm).add(v2x.scale((m2 - m1) / cm)).add(v2y)
+    
+    c1.setSpeed(nV1)
+    c2.setSpeed(nV2)
+       '''
+        
+        pass
+    
+
+INF = 1000000000
+def div(x, y):
+    #x/y
+    if y == 0:
+        return INF
+    if y > INF:
+        return 0
+    return x/y
+

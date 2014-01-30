@@ -1,0 +1,46 @@
+'''
+Created on Jan 29, 2014
+
+@author: otrebor
+'''
+import physutil
+
+class PhysEng:
+    
+    def __init__(self):
+        self.objects = []
+        
+    def objCount(self):
+        return len(self.objects)
+    
+    #object is a collider
+    def add(self, obj):
+        self.objects.append(obj)
+    
+    def remove(self, obj):
+        self.objects.remove(obj)
+        
+    def update(self, delta):
+        size = self.objCount()
+        for i in range(0, size):
+            for j in range(i, size):
+                if i != j:  # is not the same
+                    self.handleCollision(self.objects[i], self.objects[j])
+                    
+    def handleCollision(self, obj1, obj2):
+        info = physutil.testCollision(obj1, obj2)
+        if info != None:
+            if obj1.static and not obj2.static:
+                move = info.direction.scale(info.distance+5)
+                info.shape2.position = info.shape2.position.add(move)
+            elif obj2.static and not obj1.static:
+                move = info.direction.scale(info.distance+5)
+                info.shape1.position = info.shape1.position.add(move)
+            elif not obj1.static and obj2.static:  
+                move = info.direction.scale(info.distance/2+5)
+                info.shape1.position = info.shape1.position.add(move)
+                info.shape2.position = info.shape2.position.add(move.scale(-1))
+            physutil.HandleCollision(obj1, obj2, info)
+        pass
+                    
+    

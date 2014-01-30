@@ -1,0 +1,11 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import Polygon
+import game.util.Vector2.Vector2 as Vector2
+class Rectangle(Polygon.Polygon):
+    def __init__(self, (x,y) = (0,0), (w,h) = (0,0) ):
+        points = [  ]
+        Polygon.Polygon.__init__(self, (x, y), )

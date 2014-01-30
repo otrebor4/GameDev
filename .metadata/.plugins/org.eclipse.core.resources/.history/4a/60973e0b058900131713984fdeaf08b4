@@ -1,0 +1,12 @@
+'''
+Created on Jan 29, 2014
+
+@author: otrebor
+'''
+
+class PhysEng:
+    
+    def __init__(self):
+        self.objects = []
+        
+    

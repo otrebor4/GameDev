@@ -1,0 +1,34 @@
+'''
+Created on Jan 22, 2014
+
+@author: otrebor
+'''
+'''
+physical object template
+'''
+import game.base.GameObject as GameObject
+import game.base.Component as Component
+import shapes
+
+class Collider( Component.Component):
+    def __init__(self, gameObject):
+        Component.Component.__init__( self,gameObject)
+        self.shape = None   #collider shape
+    
+
+class CircleCollider( Collider ):
+    def __init__(self, gameObject, x=0,y=0, radius=0):
+        Collider.__init__(self, gameObject)
+        self.shape = shapes.Circle.Circle( x,y, radius )
+        
+    
+class RectCollider( Collider ):
+    def __init__(self, gameObject, x=0, y=0, w=0, h=0):
+        Collider.__init__(self, gameObject)
+        self.shape = shapes.Rectangle.Rectangle( x,y,w,h)
+        
+class PolygonCollider(Collider):
+    def __init__(self,GameObject(gameObject), x=0,y=0,points=[]):
+        Collider.__init__(self, gameObject)
+        self.shape = shapes.Polygon.Polygon(x,y, points)
+        

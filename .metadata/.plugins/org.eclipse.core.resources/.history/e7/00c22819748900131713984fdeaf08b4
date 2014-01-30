@@ -1,0 +1,31 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import game.base.Component as Component
+import main as main
+import game.util.Vector2 as Vector2
+class ClickToMove(Component.Component):
+    def __init__(self,gameObject):
+        Component.Component.__init__(self, gameObject)
+        self.targe = None
+        self.shape = gameObject.shape
+        self.speed = 100
+        
+    def update(self,delta):
+        if self.shape == None:
+            return
+        pos = main.pygame.mouse.get_pos()
+        (left, mid, right) = main.pygame.mouse.get_pressed()
+        if left or mid or right:
+            self.targe = Vector2.Vector2(pos[0],pos[1])
+        if self.targe != None:
+            if self.riged != None:
+                self.riged.velocity = Vector2.Vector2()
+            dir = self.targe.sub(self.shape.position).normalize()
+            dis = self.shape.position.dot(self.targe)
+            dir = dir.scale(self.speed if self.speed < dis else dis)
+            self.shape.position = self.shape.position.add(dir.scale(delta))
+            
+        

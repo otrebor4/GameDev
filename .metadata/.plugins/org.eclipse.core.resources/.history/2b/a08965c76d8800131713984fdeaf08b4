@@ -1,0 +1,9 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import Geometry
+
+class Polygon(Geometry.Geometry):
+    

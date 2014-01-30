@@ -1,0 +1,9 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import game.base.Component as Component
+
+class Riged(Component.Component):
+    

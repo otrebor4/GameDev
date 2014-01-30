@@ -1,0 +1,10 @@
+'''
+Created on Jan 28, 2014
+
+@author: otrebor
+'''
+import Shape
+
+class Circle(Shape.Shape):
+    def __init__(self):
+        
