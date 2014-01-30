@@ -5,32 +5,37 @@ Created on Jan 15, 2014
 '''
 import sys
 import time
-import util.Vector2 as Vector2
 import pygame
-import scripts.ConstForse as ConstForse
-import scripts.ApplySpeed as ApplySpeed
+import util.Vector2 as Vector2
+import random
 from pygame.locals import *
 
 import world
-
+import scripts.ClickToMove 
 
 class Game:
     GAMENAME = "null"
     
     INIT = False        
     def __init__ (self):
+        random.seed(10000)
         self.INIT = True
         pygame.init()
         self.screen = pygame.display.set_mode((500, 500))
         pygame.display.set_caption(self.GAMENAME)
         
-        self.world = world.World()
-        circle = self.world.createRect(250,20,50,50,(255,0,255))
-        circle.addComponent(ConstForse.ConstForse(circle,Vector2.Vector2(0,100) ))
-        circle.addComponent(ApplySpeed.ApplySpeed(circle) )
-        
-        wall = self.world.createWall(0, 400, 500, 100, (0,0,0))
-        
+        self.world = world.World(Vector2.Vector2(0,0))
+        for i in range(0,10):
+            c = self.world.createCircle(random.uniform(50,450), random.uniform(50,450), 10, (250,0,100))
+            c.riged.velocity = Vector2.Vector2(random.uniform(-10,10), random.uniform(-10,10)).scale(30)
+            
+        r = self.world.createRect(250, 250, 25, 25, (10,10,50))
+        r.addComponent(scripts.ClickToMove.ClickToMove(r) )
+        r.addComponent(scripts.ClickToMove.TestMessage(r))
+        self.world.createWall(1, 500, 500, 100, (0,0,0)) #bottom
+        self.world.createWall(1, -100, 500, 100, (0,0,0))   #top
+        self.world.createWall(-99, 0, 100, 500, (0,0,0))   #left
+        self.world.createWall(500, 0, 100, 500, (0,0,0)) #right
         
         
     def draw(self, delta):

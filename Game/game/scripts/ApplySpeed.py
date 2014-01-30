@@ -11,6 +11,6 @@ class ApplySpeed(Component.Component):
         
     def update(self,delta):
         if self.gameObject != None and self.gameObject.collider != None:
-            pos = self.gameObject.collider.pos()
+            pos = self.gameObject.shape.position
             speed = self.gameObject.collider.speed
             self.gameObject.collider.setPos( pos.add(speed.scale(delta)))

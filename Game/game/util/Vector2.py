@@ -11,6 +11,12 @@ class Vector2:
         self.x = x
         self.y = y
     
+    def __str__(self):
+        return "(%0.2f, %0.2f)"%(self.x, self.y)
+    
+    def __repr__(self):
+        return self.__str__()
+    
     def add(self, v2):
         return Vector2(self.x + v2.x, self.y + v2.y)
     
@@ -25,7 +31,12 @@ class Vector2:
     
     def normalize(self):
         m = self.magnitude()
+        if m == 0:
+            return Vector2()
         return Vector2(self.x / m, self.y / m)
+    
+    def normal(self):
+        return Vector2(self.y, -self.x)
     
     def distance(self, v2):
         return math.sqrt(math.pow((self.x - v2.x), 2) + math.pow((self.y - v2.y), 2))
@@ -36,3 +47,10 @@ class Vector2:
     
     def dot(self, v2):
         return self.x * v2.x + self.y * v2.y
+    
+    def cross(self,v2):
+        return Vector2(self.x*v2.y,self.y*v2.x)
+    
+    
+    
+    
