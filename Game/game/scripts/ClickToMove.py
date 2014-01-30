@@ -4,7 +4,7 @@ Created on Jan 28, 2014
 @author: otrebor
 '''
 import game.base.Component as Component
-import main as main
+import pygame
 import game.util.Vector2 as Vector2
 class ClickToMove(Component.Component):
     def __init__(self,gameObject):
@@ -16,8 +16,8 @@ class ClickToMove(Component.Component):
     def update(self,delta):
         if self.shape == None:
             return
-        pos = main.pygame.mouse.get_pos()
-        (left, mid, right) = main.pygame.mouse.get_pressed()
+        pos = pygame.mouse.get_pos()
+        (left, mid, right) = pygame.mouse.get_pressed()
         if left or mid or right:
             self.targe = Vector2.Vector2(pos[0],pos[1])
         if self.targe != None:
